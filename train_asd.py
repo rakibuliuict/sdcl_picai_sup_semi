@@ -746,7 +746,7 @@ def train(args):
             torch.save(model.state_dict(), os.path.join(snapshot_path, "best_studentA.pth"))
             torch.save(model2.state_dict(), os.path.join(snapshot_path, "best_studentB.pth"))
             torch.save(ema_model.state_dict(), os.path.join(snapshot_path, "best_ema.pth"))
-            print(f"✔️ New GLOBAL BEST (SSL epoch {epoch + 1}) saved with EMA Dice={dice_ema:.4f}")
+            print(f" New GLOBAL BEST (SSL epoch {epoch + 1}) saved with EMA Dice={dice_ema:.4f}")
 
         # log to Excel (Dice + 95HD + ASD)
         ws_ssl.append([
